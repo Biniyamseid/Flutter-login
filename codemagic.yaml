@@ -1,0 +1,27 @@
+workflows:
+  android_workflow:
+    name: Build Android APK
+    environment:
+      flutter: stable
+    scripts:
+      - flutter pub get
+      - flutter test
+      - flutter build apk --release
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com
+
+  ios_workflow:
+    name: Build iOS App
+    environment:
+      flutter: stable
+      xcode: latest
+    scripts:
+      - flutter pub get
+      - flutter test
+      - flutter build ios --no-codesign
+    publishing:
+      email:
+        recipients:
+          - biniyamseid3@gmail.com
